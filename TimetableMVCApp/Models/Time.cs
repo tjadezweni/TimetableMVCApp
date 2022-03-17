@@ -13,7 +13,7 @@ namespace TimetableMVCApp.Models
         public int TimeId { get; set; }
         public string StartTime { get; set; } = null!;
         public string EndTime { get; set; } = null!;
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? LastModifiedDate { get; set; }
 
         public virtual ICollection<Day> Days { get; set; }
