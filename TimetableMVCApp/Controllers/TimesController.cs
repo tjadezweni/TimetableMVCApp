@@ -26,25 +26,6 @@ namespace TimetableMVCApp.Controllers
             return View(await _unitOfWork._timeRepository.ListAsync(time => true));
         }
 
-        // GET: Times/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var time = await _unitOfWork
-                                ._timeRepository
-                                .GetAsync(time => time.TimeId == id);
-            if (time == null)
-            {
-                return NotFound();
-            }
-
-            return View(time);
-        }
-
         // GET: Times/Create
         public IActionResult Create()
         {

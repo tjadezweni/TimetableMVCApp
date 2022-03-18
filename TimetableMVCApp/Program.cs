@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using TimetableMVCApp.Helpers;
 using TimetableMVCApp.Models;
 using TimetableMVCApp.Repositories;
 using TimetableMVCApp.Repositories.Impl;
@@ -22,6 +23,8 @@ builder.Services.AddScoped<IDayRepository, DayRepository>();
 builder.Services.AddScoped<IModuleRepository, ModuleRepository>();
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+builder.Services.AddSingleton<ModuleIdList>();
 
 builder.Services.AddControllersWithViews();
 

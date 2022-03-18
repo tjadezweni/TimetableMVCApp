@@ -28,23 +28,6 @@ namespace TimetableMVCApp.Controllers
             return View(days);
         }
 
-        // GET: Days/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var day = await _unitOfWork._dayRepository.GetDayAsync(day => day.DayId == id);
-            if (day == null)
-            {
-                return NotFound();
-            }
-
-            return View(day);
-        }
-
         // GET: Days/Create
         public async Task<IActionResult> Create()
         {
