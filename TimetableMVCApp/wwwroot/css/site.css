@@ -15,7 +15,8 @@ html {
 
 body {
   margin-bottom: 60px;
-  background-color: darkgrey
+  background-color: darkgrey;
+  margin-top: 50px;
 }
 
 a {
