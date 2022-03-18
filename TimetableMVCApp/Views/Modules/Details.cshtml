@@ -5,8 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
-
 <div>
     <h4>Module</h4>
     <hr />
@@ -38,6 +36,10 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.ModuleId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <p class="btn btn-secondary">
+        <a asp-action="Edit" asp-route-id="@Model?.ModuleId">Edit</a>
+    </p>
+    <p class="btn btn-warning">
+        <a asp-action="Index">Back to List</a>
+    </p>
 </div>
