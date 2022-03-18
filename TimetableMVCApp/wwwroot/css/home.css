@@ -1,0 +1,8 @@
+﻿body {
+    background-image: url("../images/timetable.jpg");
+    background-size: cover;
+}
+
+.content {
+    margin-top: 100px;
+}

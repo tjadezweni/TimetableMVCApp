@@ -2,8 +2,14 @@
     ViewData["Title"] = "Home Page";
 }
 
-<section id="home">
-    <div  style="background-image: url('images/timetable.jpg'); background-size: cover;">
 
+@section homeStyles {
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+}
+
+<section id="home">
+    <div class="content">
+        <p class="h1 text-black display-1">Welcome</p>
+        <p class="h6 text-black">To the <span style="color:#ea1d6f;">only</span> timetable app you will ever need.</p>
     </div>
 </section>

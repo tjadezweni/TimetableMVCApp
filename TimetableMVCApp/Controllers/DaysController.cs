@@ -59,6 +59,7 @@ namespace TimetableMVCApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("DayId,Name,TimeId")] Day day)
         {
+            ModelState.Remove("Time");
             if (ModelState.IsValid)
             {
                 await _unitOfWork._dayRepository.AddAsync(day);

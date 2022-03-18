@@ -14,7 +14,7 @@ namespace TimetableMVCApp.Models
         public string Name { get; set; } = null!;
         public int TimeId { get; set; }
 
-        public virtual Time Time { get; set; } = null!;
+        public virtual Time? Time { get; set; } = null!;
 
         public virtual ICollection<Module> Modules { get; set; }
     }
