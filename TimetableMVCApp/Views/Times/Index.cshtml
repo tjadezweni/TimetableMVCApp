@@ -7,10 +7,11 @@
 
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
+<p class="btn btn-light">
+    <a style="color: black" asp-action="Create">Create New</a>
 </p>
-<table class="table">
+
+<table class="table table-bordered table-dark">
     <thead>
         <tr>
             <th>
@@ -50,9 +51,17 @@
                 @Html.DisplayFor(modelItem => item.LastModifiedDate)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.TimeId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.TimeId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.TimeId">Delete</a>
+                <p class="btn btn-secondary">
+                    <a asp-action="Edit" asp-route-id="@item.TimeId">Edit</a>
+                </p>
+                 
+                <p class="btn btn-info">
+                    <a asp-action="Details" asp-route-id="@item.TimeId">Details</a>
+                </p>
+                 
+                <p class="btn btn-danger">
+                    <a asp-action="Delete" asp-route-id="@item.TimeId">Delete</a>
+                </p>
             </td>
         </tr>
 }

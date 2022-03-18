@@ -15,4 +15,10 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: darkgrey
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
