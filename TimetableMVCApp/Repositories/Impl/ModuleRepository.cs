@@ -12,7 +12,7 @@ public class ModuleRepository : BaseRepository<Module>, IModuleRepository
         { }
 
     public async Task<List<Module>> GetModulesWithDaysAsync(Expression<Func<Module, bool>> expression)
-    {   var modules = await _dbSet.Include(module => module.Days).Where(expression).ToListAsync();
+    {   var modules = await _dbSet.Include(module => module.Days).ThenInclude(day => day.Time).Where(expression).ToListAsync();
         return modules;
     }
 }
